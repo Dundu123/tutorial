@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Newsportal - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2023-11-21T07:57:03.060Z</entry>
+<entry key="groupId">com.gofortrainings.newsportal</entry>
+<entry key="name">newsportal.all</entry>
+<entry key="description">All content package for Newsportal</entry>
+<entry key="artifactId">newsportal.all</entry>
+<entry key="version">1.0.0-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.gofortrainings.newsportal</entry>
+</properties>

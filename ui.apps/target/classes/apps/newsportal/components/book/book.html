@@ -1,0 +1,15 @@
+<h2>${properties.text}</h2>
+
+<div data-sly-list="${properties.contact}">
+    <div>
+        <h3>Contact Information</h3>
+        <dl>
+            <dt>Name:</dt>
+            <dd>${item.contactName}</dd>
+            <dt>Email:</dt>
+            <dd>${item.contactEmail}</dd>
+        </dl>
+    </div>
+    <!-- Debugging -->
+    <p>${item}</p>
+</div>

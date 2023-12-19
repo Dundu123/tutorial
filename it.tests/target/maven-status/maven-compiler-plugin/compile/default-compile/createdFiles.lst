@@ -1,0 +1,4 @@
+com\gofortrainings\newsportal\it\tests\GetPageIT.class
+com\gofortrainings\newsportal\it\tests\PublishPageValidationIT.class
+com\gofortrainings\newsportal\it\tests\CreatePageIT.class
+com\gofortrainings\newsportal\it\tests\HtmlUnitClient.class

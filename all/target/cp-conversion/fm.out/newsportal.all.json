@@ -1,0 +1,49 @@
+{
+  "id":"com.gofortrainings.newsportal:newsportal.all:slingosgifeature:1.0.0-SNAPSHOT",
+  "bundles":[
+    {
+      "id":"com.gofortrainings.newsportal:newsportal.core:1.0.0-SNAPSHOT",
+      "Bundle-SymbolicName":"newsportal.core",
+      "Bundle-Version":"1.0.0.SNAPSHOT",
+      "start-order":"20",
+      "content-package-origins":"com.gofortrainings.newsportal:newsportal.all:1.0.0-SNAPSHOT"
+    }
+  ],
+  "configurations":  {
+    "org.apache.sling.commons.log.LogManager.factory.config~newsportal":    {
+      "org.apache.sling.commons.log.names":[
+        "com.gofortrainings.newsportal"
+      ],
+      "org.apache.sling.commons.log.level":"INFO",
+      "org.apache.sling.commons.log.file":"logs/error.log",
+      "org.apache.sling.commons.log.additiv":"false",
+      ":configurator:content-package-origins":"com.gofortrainings.newsportal:newsportal.all:1.0.0-SNAPSHOT|com.gofortrainings.newsportal:newsportal.ui.config:1.0.0-SNAPSHOT"
+    }
+  },
+  "repoinit:TEXT|true":[
+    "# origin=com.gofortrainings.newsportal:newsportal.all:1.0.0-SNAPSHOT|com.gofortrainings.newsportal:newsportal.ui.config:1.0.0-SNAPSHOT source=org.apache.sling.jcr.repoinit.RepositoryInitializer~newsportal\r",
+    "create path (sling:OrderedFolder) /content/dam/newsportal\r",
+    "create path (nt:unstructured) /content/dam/newsportal/jcr:content\r",
+    "set properties on /content/dam/newsportal/jcr:content",
+    "  set cq:conf{String} to /conf/newsportal",
+    "  set jcr:title{String} to \"Newsportal\"",
+    "end"
+  ],
+  "content-packages:ARTIFACTS|true":[
+    "com.gofortrainings.newsportal:newsportal.ui.config:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+    "com.gofortrainings.newsportal:newsportal.ui.apps:zip:cp2fm-converted:1.0.0-SNAPSHOT",
+    "com.gofortrainings.newsportal:newsportal.all:zip:cp2fm-converted:1.0.0-SNAPSHOT"
+  ],
+  "api-regions:JSON|false":[
+    {
+      "name":"global",
+      "exports":[
+        "com.gofortrainings.newsportal.core.filters",
+        "com.gofortrainings.newsportal.core.listeners",
+        "com.gofortrainings.newsportal.core.models",
+        "com.gofortrainings.newsportal.core.schedulers",
+        "com.gofortrainings.newsportal.core.servlets"
+      ]
+    }
+  ]
+}

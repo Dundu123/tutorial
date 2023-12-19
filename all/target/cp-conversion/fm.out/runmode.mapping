@@ -1,0 +1,5 @@
+#File edited by the Apache Sling Content Package to Sling Feature converter
+#Mon Oct 02 14:04:31 IST 2023
+author=newsportal.all-author.json
+publish=newsportal.all-publish.json
+(default)=newsportal.all.json

@@ -1,0 +1,16 @@
+
+
+
+<sly data-sly-use.article="com.gofortrainings.newsportal.core.models.Articledetails">
+    <div>
+        <h1>${article.text ? article.text : 'Default Text'}</h1>
+        <p>${article.desc ? article.desc : 'Default Description'  @context='html'}</p>
+       <img src="${article.image ? article.image : ''}" alt="${article.desc ? article.desc : 'no image'}" style="width: 500px; height: 300px;" />
+
+        
+    </div>
+    
+</sly>
+
+        
+    
